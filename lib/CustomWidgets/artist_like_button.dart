@@ -82,7 +82,7 @@ class _ArtistLikeButtonState extends State<ArtistLikeButton>
       scale: _scale,
       child: IconButton(
         icon: Icon(
-          liked ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+          liked ? Icons.favorite_rounded : Icons.delete,
           color: liked ? Colors.redAccent : Theme.of(context).iconTheme.color,
         ),
         iconSize: widget.size ?? 24.0,

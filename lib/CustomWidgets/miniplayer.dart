@@ -21,8 +21,10 @@ import 'package:audio_service/audio_service.dart';
 import 'package:blackhole/CustomWidgets/gradient_containers.dart';
 import 'package:blackhole/CustomWidgets/image_card.dart';
 import 'package:blackhole/Screens/Player/audioplayer.dart';
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class MiniPlayer extends StatefulWidget {
@@ -97,28 +99,26 @@ class _MiniPlayerState extends State<MiniPlayer> {
                 ),
                 elevation: 0,
                 child: SizedBox(
-                  child: GradientContainer(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        miniplayerTile(
-                          context: context,
-                          preferredMiniButtons: preferredMiniButtons,
-                          // useDense: true,
-                          title: mediaItem?.title ?? '',
-                          subtitle: mediaItem?.artist ?? '',
-                          imagePath: (isLocal
-                                  ? mediaItem?.artUri?.toFilePath()
-                                  : mediaItem?.artUri?.toString()) ??
-                              '',
-                          isLocalImage: isLocal,
-                          isDummy: mediaItem == null,
-                        ),
-                        positionSlider(
-                          mediaItem?.duration?.inSeconds.toDouble(),
-                        ),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      miniplayerTile(
+                        context: context,
+                        preferredMiniButtons: preferredMiniButtons,
+                        // useDense: true,
+                        title: mediaItem?.title ?? '',
+                        subtitle: mediaItem?.artist ?? '',
+                        imagePath: (isLocal
+                                ? mediaItem?.artUri?.toFilePath()
+                                : mediaItem?.artUri?.toString()) ??
+                            '',
+                        isLocalImage: isLocal,
+                        isDummy: mediaItem == null,
+                      ),
+                      positionSlider(
+                        mediaItem?.duration?.inSeconds.toDouble(),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -146,16 +146,22 @@ class _MiniPlayerState extends State<MiniPlayer> {
           : () {
               Navigator.pushNamed(context, '/player');
             },
-      title: Text(
-        isDummy ? 'Now Playing' : title,
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-      ),
-      subtitle: Text(
-        isDummy ? 'Unknown' : subtitle,
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-      ),
+      title: Text(isDummy ? 'Now Playing' : title,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w500,
+            color: AppTheme.titleColor,
+            fontSize: 14.0,
+          )),
+      subtitle: Text(isDummy ? 'Unknown' : subtitle,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w400,
+            color: AppTheme.subtitleColor,
+            fontSize: 12.0,
+          )),
       leading: Hero(
         tag: 'currentArtwork',
         child: imageCard(

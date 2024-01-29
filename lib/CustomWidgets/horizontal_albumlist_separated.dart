@@ -17,10 +17,10 @@
  * Copyright (c) 2021-2023, Ankit Sangwan
  */
 
-import 'package:blackhole/CustomWidgets/custom_physics.dart';
 import 'package:blackhole/CustomWidgets/image_card.dart';
-import 'package:blackhole/CustomWidgets/song_tile_trailing_menu.dart';
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HorizontalAlbumsListSeparated extends StatelessWidget {
   final List songsList;
@@ -82,16 +82,13 @@ class HorizontalAlbumsListSeparated extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerLeft,
         child: ListView.builder(
-          physics: PagingScrollPhysics(itemDimension: listSize),
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
-          itemExtent: listSize,
           itemCount: (songsList.length / 4).ceil(),
           itemBuilder: (context, index) {
             final itemGroup = songsList.skip(index * 4).take(4);
             return SizedBox(
-              height: 72 * 4,
-              width: listSize,
+              width: MediaQuery.of(context).size.width * 0.99,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: itemGroup.map((item) {
@@ -100,10 +97,20 @@ class HorizontalAlbumsListSeparated extends StatelessWidget {
                     title: Text(
                       formatString(item['title']?.toString()),
                       overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14.0,
+                        color: AppTheme.textColor,
+                      ),
                     ),
                     subtitle: Text(
                       subTitle,
                       overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12.0,
+                        color: AppTheme.subtitleColor,
+                      ),
                     ),
                     leading: imageCard(
                       imageUrl: item['image'].toString(),
@@ -120,9 +127,9 @@ class HorizontalAlbumsListSeparated extends StatelessWidget {
                                   'assets/cover.jpg',
                                 ),
                     ),
-                    trailing: SongTileTrailingMenu(
-                      data: item,
-                    ),
+                    // trailing: SongTileTrailingMenu(
+                    //   data: item,
+                    // ),
                     onTap: () => onTap(songsList.indexOf(item)),
                   );
                 }).toList(),

@@ -1,3 +1,4 @@
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -59,7 +60,7 @@ class CustomBottomNavBar extends StatelessWidget {
     final theme = Theme.of(context);
 
     return ColoredBox(
-      color: backgroundColor ?? Colors.transparent,
+      color: AppTheme.backgroundColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Row(
@@ -79,9 +80,8 @@ class CustomBottomNavBar extends StatelessWidget {
                       selectedItemColor ??
                       theme.primaryColor;
 
-                  final unselectedColor = item.unselectedColor ??
-                      unselectedItemColor ??
-                      theme.iconTheme.color;
+                  final unselectedColor =
+                      item.unselectedColor ?? AppTheme.textColor;
 
                   return Material(
                     color: Color.lerp(
@@ -111,7 +111,7 @@ class CustomBottomNavBar extends StatelessWidget {
                                   selectedColor,
                                   t,
                                 ),
-                                size: 24,
+                                size: 20,
                               ),
                               child: items.indexOf(item) == currentIndex
                                   ? item.activeIcon ?? item.icon
@@ -124,9 +124,8 @@ class CustomBottomNavBar extends StatelessWidget {
                                 ///
                                 /// The Align property appears to make these full height, would be
                                 /// best to find a way to make it respond only to padding.
-                                height: 20,
+                                height: 18,
                                 child: Align(
-                                  alignment: const Alignment(-0.2, 0.0),
                                   widthFactor: t,
                                   child: Padding(
                                     padding: Directionality.of(context) ==
@@ -148,7 +147,18 @@ class CustomBottomNavBar extends StatelessWidget {
                                         ),
                                         fontWeight: FontWeight.w600,
                                       ),
-                                      child: item.title,
+                                      child: Text(
+                                        item.title,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12.0,
+                                          color: items.indexOf(item) ==
+                                                  currentIndex
+                                              ? selectedColor
+                                              : AppTheme.titleColor,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -177,7 +187,7 @@ class CustomBottomNavBarItem {
   final Widget? activeIcon;
 
   /// Text to display, ie `Home`
-  final Widget title;
+  final String title;
 
   /// A primary color to use for this tab.
   final Color? selectedColor;

@@ -20,6 +20,7 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:blackhole/CustomWidgets/snackbar.dart';
 import 'package:blackhole/Helpers/playlist.dart';
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:logging/logging.dart';
@@ -93,7 +94,7 @@ class _LikeButtonState extends State<LikeButton>
       child: IconButton(
         icon: Icon(
           liked ? Icons.favorite_rounded : Icons.favorite_border_rounded,
-          color: liked ? Colors.redAccent : Theme.of(context).iconTheme.color,
+          color: liked ? Colors.redAccent : AppTheme.textColor,
         ),
         iconSize: widget.size ?? 24.0,
         tooltip: liked

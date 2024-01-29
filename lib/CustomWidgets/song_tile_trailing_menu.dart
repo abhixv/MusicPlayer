@@ -25,6 +25,7 @@ import 'package:blackhole/Screens/Common/song_list.dart';
 import 'package:blackhole/Screens/Search/albums.dart';
 import 'package:blackhole/Screens/Search/search.dart';
 import 'package:blackhole/Services/youtube_services.dart';
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -53,7 +54,7 @@ class _SongTileTrailingMenuState extends State<SongTileTrailingMenu> {
     return PopupMenuButton(
       icon: Icon(
         Icons.more_vert_rounded,
-        color: Theme.of(context).iconTheme.color,
+        color: AppTheme.iconColor,
       ),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(

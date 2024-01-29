@@ -39,14 +39,15 @@ Widget imageCard({
   Function(Object, StackTrace?)? localErrorFunction,
 }) {
   return Card(
-    elevation: elevation,
+    elevation: 0,
     margin: margin,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(borderRadius),
     ),
     clipBehavior: Clip.antiAlias,
-    child: SizedBox.square(
-      dimension: boxDimension,
+    child: SizedBox(
+      height: 50,
+      width: 50,
       child: Stack(
         fit: StackFit.expand,
         children: [

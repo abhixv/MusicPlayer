@@ -41,6 +41,7 @@ import 'package:blackhole/Helpers/lyrics.dart';
 import 'package:blackhole/Helpers/mediaitem_converter.dart';
 import 'package:blackhole/Screens/Common/song_list.dart';
 import 'package:blackhole/Screens/Search/albums.dart';
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
@@ -831,7 +832,10 @@ class ControlButtons extends StatelessWidget {
               builder: (context, snapshot) {
                 final queueState = snapshot.data;
                 return IconButton(
-                  icon: const Icon(Icons.skip_previous_rounded),
+                  icon: Icon(
+                    Icons.skip_previous_rounded,
+                    color: AppTheme.textColor,
+                  ),
                   iconSize: miniplayer ? 24.0 : 45.0,
                   tooltip: AppLocalizations.of(context)!.skipPrevious,
                   color: dominantColor ?? Theme.of(context).iconTheme.color,
@@ -872,16 +876,18 @@ class ControlButtons extends StatelessWidget {
                               ? IconButton(
                                   tooltip: AppLocalizations.of(context)!.pause,
                                   onPressed: audioHandler.pause,
-                                  icon: const Icon(
+                                  icon: Icon(
                                     Icons.pause_rounded,
+                                    color: AppTheme.textColor,
                                   ),
                                   color: Theme.of(context).iconTheme.color,
                                 )
                               : IconButton(
                                   tooltip: AppLocalizations.of(context)!.play,
                                   onPressed: audioHandler.play,
-                                  icon: const Icon(
+                                  icon: Icon(
                                     Icons.play_arrow_rounded,
+                                    color: AppTheme.textColor,
                                   ),
                                   color: Theme.of(context).iconTheme.color,
                                 ),
@@ -931,7 +937,10 @@ class ControlButtons extends StatelessWidget {
               builder: (context, snapshot) {
                 final queueState = snapshot.data;
                 return IconButton(
-                  icon: const Icon(Icons.skip_next_rounded),
+                  icon: Icon(
+                    Icons.skip_next_rounded,
+                    color: AppTheme.textColor,
+                  ),
                   iconSize: miniplayer ? 24.0 : 45.0,
                   tooltip: AppLocalizations.of(context)!.skipNext,
                   color: dominantColor ?? Theme.of(context).iconTheme.color,
