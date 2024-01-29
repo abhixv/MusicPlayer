@@ -19,6 +19,7 @@
 
 import 'package:blackhole/CustomWidgets/drawer.dart';
 import 'package:blackhole/Screens/Home/saavn.dart';
+import 'package:blackhole/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppTheme.backgroundColor,
       body: SaavnHomePage(),
       drawer: homeDrawer(context: context),
     );

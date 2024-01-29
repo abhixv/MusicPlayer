@@ -271,75 +271,79 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.transparent,
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.manual,
+      overlays: [SystemUiOverlay.top],
+    );
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: AppTheme.backgroundColor,
+        statusBarBrightness: AppTheme.themeMode == ThemeMode.system
+            ? MediaQuery.platformBrightnessOf(context) == Brightness.dark
+                ? Brightness.dark
+                : Brightness.light
+            : AppTheme.themeMode == ThemeMode.dark
+                ? Brightness.dark
+                : Brightness.light,
         statusBarIconBrightness: AppTheme.themeMode == ThemeMode.system
             ? MediaQuery.platformBrightnessOf(context) == Brightness.dark
-                ? Brightness.light
-                : Brightness.dark
+                ? Brightness.dark
+                : Brightness.light
             : AppTheme.themeMode == ThemeMode.dark
-                ? Brightness.light
-                : Brightness.dark,
+                ? Brightness.dark
+                : Brightness.light,
+        systemNavigationBarColor: Colors.transparent,
         systemNavigationBarIconBrightness:
             AppTheme.themeMode == ThemeMode.system
                 ? MediaQuery.platformBrightnessOf(context) == Brightness.dark
-                    ? Brightness.light
-                    : Brightness.dark
+                    ? Brightness.dark
+                    : Brightness.light
                 : AppTheme.themeMode == ThemeMode.dark
-                    ? Brightness.light
-                    : Brightness.dark,
+                    ? Brightness.dark
+                    : Brightness.light,
       ),
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          return OrientationBuilder(
-            builder: (context, orientation) {
-              SizerUtil.setScreenSize(constraints, orientation);
-              return MaterialApp(
-                title: 'BlackHole',
-                restorationScopeId: 'blackhole',
-                debugShowCheckedModeBanner: false,
-                themeMode: AppTheme.themeMode,
-                theme: AppTheme.lightTheme(
-                  context: context,
-                ),
-                darkTheme: AppTheme.darkTheme(
-                  context: context,
-                ),
-                locale: _locale,
-                localizationsDelegates: const [
-                  AppLocalizations.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate,
-                ],
-                supportedLocales: LanguageCodes.languageCodes.entries
-                    .map((languageCode) => Locale(languageCode.value, ''))
-                    .toList(),
-                routes: namedRoutes,
-                navigatorKey: navigatorKey,
-                onGenerateRoute: (RouteSettings settings) {
-                  if (settings.name == '/player') {
-                    return PageRouteBuilder(
-                      opaque: false,
-                      pageBuilder: (_, __, ___) => const PlayScreen(),
-                    );
-                  }
-                  return HandleRoute.handleRoute(settings.name);
-                },
-              );
-            },
-          );
-        },
-      ),
+    );
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return OrientationBuilder(
+          builder: (context, orientation) {
+            SizerUtil.setScreenSize(constraints, orientation);
+            return MaterialApp(
+              title: 'BlackHole',
+              restorationScopeId: 'blackhole',
+              debugShowCheckedModeBanner: false,
+              themeMode: AppTheme.themeMode,
+              theme: AppTheme.lightTheme(
+                context: context,
+              ),
+              darkTheme: AppTheme.darkTheme(
+                context: context,
+              ),
+              locale: _locale,
+              localizationsDelegates: const [
+                AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: LanguageCodes.languageCodes.entries
+                  .map((languageCode) => Locale(languageCode.value, ''))
+                  .toList(),
+              routes: namedRoutes,
+              navigatorKey: navigatorKey,
+              onGenerateRoute: (RouteSettings settings) {
+                if (settings.name == '/player') {
+                  return PageRouteBuilder(
+                    opaque: false,
+                    pageBuilder: (_, __, ___) => const PlayScreen(),
+                  );
+                }
+                return HandleRoute.handleRoute(settings.name);
+              },
+            );
+          },
+        );
+      },
     );
   }
 }
