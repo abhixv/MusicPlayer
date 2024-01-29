@@ -18,6 +18,7 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Widget emptyScreen(
   BuildContext context,
@@ -41,7 +42,7 @@ Widget emptyScreen(
             child: Text(
               text1,
               textAlign: TextAlign.start,
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: size1,
                 color: useWhite
                     ? Colors.white
@@ -54,7 +55,7 @@ Widget emptyScreen(
             children: [
               Text(
                 text2,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: size2,
                   color: useWhite
                       ? Colors.white
@@ -64,7 +65,7 @@ Widget emptyScreen(
               ),
               Text(
                 text3,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: size3,
                   fontWeight: FontWeight.w600,
                   color: useWhite ? Colors.white : null,

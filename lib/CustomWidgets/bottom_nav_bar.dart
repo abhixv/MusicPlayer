@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -138,8 +139,8 @@ class CustomBottomNavBar extends StatelessWidget {
                                             left: itemPadding.left,
                                             right: itemPadding.right / 2,
                                           ),
-                                    child: DefaultTextStyle(
-                                      style: TextStyle(
+                                    child: DefaultTextStyle.merge(
+                                      style: GoogleFonts.poppins(
                                         color: Color.lerp(
                                           selectedColor.withOpacity(0.0),
                                           selectedColor,

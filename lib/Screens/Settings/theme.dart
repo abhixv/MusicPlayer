@@ -7,6 +7,7 @@ import 'package:blackhole/Helpers/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class ThemePage extends StatefulWidget {
@@ -52,7 +53,7 @@ class _ThemePageState extends State<ThemePage> {
             )!
                 .theme,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Theme.of(context).iconTheme.color,
             ),
           ),
@@ -608,7 +609,7 @@ class _ThemePageState extends State<ThemePage> {
                     onTap: () {},
                     trailing: DropdownButton(
                       value: canvasColor,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 12,
                         color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
@@ -650,7 +651,7 @@ class _ThemePageState extends State<ThemePage> {
                     onTap: () {},
                     trailing: DropdownButton(
                       value: cardColor,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 12,
                         color: Theme.of(context).textTheme.bodyLarge!.color,
                       ),
@@ -724,7 +725,7 @@ class _ThemePageState extends State<ThemePage> {
               ),
               trailing: DropdownButton(
                 value: theme,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: Theme.of(context).textTheme.bodyLarge!.color,
                 ),
@@ -850,7 +851,7 @@ class _ThemePageState extends State<ThemePage> {
                                         context,
                                       )!
                                           .deleteTheme,
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                         color: Theme.of(context)
                                             .colorScheme
                                             .secondary,

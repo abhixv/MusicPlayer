@@ -23,6 +23,7 @@ import 'package:blackhole/Screens/Player/audioplayer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SeekBar extends StatefulWidget {
   final AudioPlayerHandler audioHandler;
@@ -86,7 +87,7 @@ class _SeekBarState extends State<SeekBar> {
                 // if (widget.offline)
                 //   Text(
                 //     'Offline',
-                //     style: TextStyle(
+                //     style:  GoogleFonts.poppins(
                 //       fontWeight: FontWeight.w500,
                 //       color: Theme.of(context).disabledColor,
                 //       fontSize: 14.0,
@@ -102,7 +103,7 @@ class _SeekBarState extends State<SeekBar> {
                     return GestureDetector(
                       child: Text(
                         speedValue,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
                           color: speedValue == '1.0x'
                               ? Theme.of(context).disabledColor
@@ -290,8 +291,7 @@ void showSliderDialog({
                     ),
                     Text(
                       '${snapshot.data?.toStringAsFixed(1)}$valueSuffix',
-                      style: const TextStyle(
-                        fontFamily: 'Fixed',
+                      style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
                         fontSize: 24.0,
                       ),

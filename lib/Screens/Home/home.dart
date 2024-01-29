@@ -41,6 +41,7 @@ import 'package:blackhole/Screens/YouTube/youtube_home.dart';
 import 'package:blackhole/Services/ext_storage_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:logging/logging.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -261,14 +262,14 @@ class _HomePageState extends State<HomePage> {
                     title: RichText(
                       text: TextSpan(
                         text: AppLocalizations.of(context)!.appTitle,
-                        style: const TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 30.0,
                           fontWeight: FontWeight.w500,
                         ),
                         children: <TextSpan>[
                           TextSpan(
                             text: appVersion == null ? '' : '\nv$appVersion',
-                            style: const TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 7.0,
                             ),
                           ),
@@ -461,7 +462,7 @@ class _HomePageState extends State<HomePage> {
                             child: Text(
                               AppLocalizations.of(context)!.madeBy,
                               textAlign: TextAlign.center,
-                              style: const TextStyle(fontSize: 12),
+                              style: GoogleFonts.poppins(fontSize: 12),
                             ),
                           ),
                         ),
@@ -494,11 +495,11 @@ class _HomePageState extends State<HomePage> {
                       labelType: screenWidth > 1050
                           ? NavigationRailLabelType.selected
                           : NavigationRailLabelType.none,
-                      selectedLabelTextStyle: TextStyle(
+                      selectedLabelTextStyle: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                         fontWeight: FontWeight.w600,
                       ),
-                      unselectedLabelTextStyle: TextStyle(
+                      unselectedLabelTextStyle: GoogleFonts.poppins(
                         color: Theme.of(context).iconTheme.color,
                       ),
                       selectedIconTheme: Theme.of(context).iconTheme.copyWith(

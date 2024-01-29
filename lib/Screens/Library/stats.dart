@@ -20,6 +20,7 @@
 import 'package:blackhole/CustomWidgets/gradient_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class Stats extends StatelessWidget {
@@ -61,7 +62,7 @@ class Stats extends StatelessWidget {
                     children: [
                       Text(
                         songsPlayed.toString(),
-                        style: const TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 60,
                           fontWeight: FontWeight.bold,
                         ),
@@ -89,7 +90,7 @@ class Stats extends StatelessWidget {
                       ),
                       Text(
                         mostPlayed['title']?.toString() ?? 'Unknown',
-                        style: const TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),

@@ -25,6 +25,7 @@ import 'package:blackhole/Screens/LocalMusic/downed_songs.dart';
 import 'package:blackhole/Screens/LocalMusic/downed_songs_desktop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -45,7 +46,7 @@ class _LibraryPageState extends State<LibraryPage> {
         AppBar(
           title: Text(
             AppLocalizations.of(context)!.library,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Theme.of(context).iconTheme.color,
             ),
           ),
@@ -144,7 +145,7 @@ class LibraryTile extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: TextStyle(
+        style: GoogleFonts.poppins(
           color: Theme.of(context).iconTheme.color,
         ),
       ),

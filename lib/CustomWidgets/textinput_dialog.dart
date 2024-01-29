@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextInputDialog extends StatelessWidget {
   final String title;
@@ -28,7 +29,7 @@ class TextInputDialog extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),

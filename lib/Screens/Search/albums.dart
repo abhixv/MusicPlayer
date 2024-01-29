@@ -28,6 +28,7 @@ import 'package:blackhole/Screens/Common/song_list.dart';
 import 'package:blackhole/Screens/Search/artists.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AlbumSearchPage extends StatefulWidget {
   final String query;
@@ -161,7 +162,7 @@ class _AlbumSearchPageState extends State<AlbumSearchPage> {
                                 title: Text(
                                   '${entry["title"]}',
                                   overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),

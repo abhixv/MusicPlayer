@@ -24,6 +24,14 @@ import 'package:get_it/get_it.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class AppTheme {
+  static Color backgroundColor = Colors.white;
+  static Color titleColor = Colors.black;
+  static Color subtitleColor = Colors.grey[600]!;
+  static Color iconColor = Colors.grey[800]!;
+  static Color textColor = Colors.grey[800]!;
+  static Color canvasColor = Colors.white;
+  static Color cardColor = const Color.fromARGB(255, 247, 237, 237);
+
   static MyTheme get currentTheme => GetIt.I<MyTheme>();
   static ThemeMode get themeMode => GetIt.I<MyTheme>().currentTheme();
 

@@ -21,6 +21,7 @@ import 'package:blackhole/CustomWidgets/copy_clipboard.dart';
 import 'package:blackhole/CustomWidgets/gradient_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -77,7 +78,7 @@ class _AboutScreenState extends State<AboutScreen> {
               elevation: 0,
               title: Text(
                 AppLocalizations.of(context)!.about,
-                style: const TextStyle(
+                style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -110,7 +111,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       const SizedBox(height: 20),
                       Text(
                         AppLocalizations.of(context)!.appTitle,
-                        style: const TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 35,
                           fontWeight: FontWeight.bold,
                         ),
@@ -128,7 +129,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         Text(
                           AppLocalizations.of(context)!.aboutLine1,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(fontSize: 16),
+                          style: GoogleFonts.poppins(fontSize: 16),
                         ),
                         TextButton(
                           onPressed: () {
@@ -154,7 +155,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         Text(
                           AppLocalizations.of(context)!.aboutLine2,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(fontSize: 16),
+                          style: GoogleFonts.poppins(fontSize: 16),
                         ),
                       ],
                     ),
@@ -187,7 +188,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       Text(
                         AppLocalizations.of(context)!.or,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 12),
+                        style: GoogleFonts.poppins(fontSize: 12),
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
@@ -227,7 +228,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       Text(
                         AppLocalizations.of(context)!.sponsor,
                         textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 12),
+                        style: GoogleFonts.poppins(fontSize: 12),
                       ),
                     ],
                   ),
@@ -240,7 +241,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       child: Center(
                         child: Text(
                           AppLocalizations.of(context)!.madeBy,
-                          style: const TextStyle(fontSize: 12),
+                          style: GoogleFonts.poppins(fontSize: 12),
                           textAlign: TextAlign.center,
                         ),
                       ),

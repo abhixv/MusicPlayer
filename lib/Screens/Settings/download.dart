@@ -5,6 +5,7 @@ import 'package:blackhole/Helpers/picker.dart';
 import 'package:blackhole/Services/ext_storage_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class DownloadPage extends StatefulWidget {
@@ -40,7 +41,7 @@ class _DownloadPageState extends State<DownloadPage> {
             )!
                 .down,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Theme.of(context).iconTheme.color,
             ),
           ),
@@ -68,7 +69,7 @@ class _DownloadPageState extends State<DownloadPage> {
               onTap: () {},
               trailing: DropdownButton(
                 value: downloadQuality,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: Theme.of(context).textTheme.bodyLarge!.color,
                 ),
@@ -111,7 +112,7 @@ class _DownloadPageState extends State<DownloadPage> {
               onTap: () {},
               trailing: DropdownButton(
                 value: ytDownloadQuality,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: Theme.of(context).textTheme.bodyLarge!.color,
                 ),

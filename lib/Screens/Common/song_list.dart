@@ -34,6 +34,7 @@ import 'package:blackhole/Models/url_image_generator.dart';
 import 'package:blackhole/Services/player_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:logging/logging.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -277,7 +278,7 @@ class _SongsListPageState extends State<SongsListPage> {
                         ),
                         child: Text(
                           AppLocalizations.of(context)!.songs,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0,
                             color: Theme.of(context).colorScheme.secondary,
@@ -290,7 +291,7 @@ class _SongsListPageState extends State<SongsListPage> {
                         title: Text(
                           '${entry["title"]}',
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
                           ),
                         ),

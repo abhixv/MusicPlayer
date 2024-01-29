@@ -6,6 +6,7 @@ import 'package:blackhole/Helpers/update.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -51,7 +52,7 @@ class _AboutPageState extends State<AboutPage> {
             )!
                 .about,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Theme.of(context).iconTheme.color,
             ),
           ),
@@ -148,7 +149,7 @@ class _AboutPageState extends State<AboutPage> {
                         },
                         trailing: Text(
                           'v$appVersion',
-                          style: const TextStyle(fontSize: 12),
+                          style: GoogleFonts.poppins(fontSize: 12),
                         ),
                         dense: true,
                       ),
@@ -252,7 +253,7 @@ class _AboutPageState extends State<AboutPage> {
                               context,
                             )!
                                 .copy,
-                            style: const TextStyle(
+                            style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -508,7 +509,7 @@ class _AboutPageState extends State<AboutPage> {
                         child: Text(
                           AppLocalizations.of(context)!.madeBy,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(fontSize: 12),
+                          style: GoogleFonts.poppins(fontSize: 12),
                         ),
                       ),
                     ),

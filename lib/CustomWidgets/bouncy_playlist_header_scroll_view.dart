@@ -22,6 +22,7 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BouncyPlaylistHeaderScrollView extends StatelessWidget {
   final ScrollController scrollController;
@@ -140,7 +141,7 @@ class BouncyPlaylistHeaderScrollView extends StatelessWidget {
                             children: [
                               Text(
                                 title,
-                                style: const TextStyle(
+                                style: GoogleFonts.poppins(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -157,7 +158,7 @@ class BouncyPlaylistHeaderScrollView extends StatelessWidget {
                                     softWrap: false,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 3,
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       fontSize: 12,
                                       color: Theme.of(context)
                                           .textTheme
@@ -177,7 +178,7 @@ class BouncyPlaylistHeaderScrollView extends StatelessWidget {
                                     softWrap: false,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 3,
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       fontSize: 12,
                                       color: Theme.of(context)
                                           .textTheme
@@ -239,7 +240,7 @@ class BouncyPlaylistHeaderScrollView extends StatelessWidget {
                                                 Text(
                                                   AppLocalizations.of(context)!
                                                       .play,
-                                                  style: TextStyle(
+                                                  style: GoogleFonts.poppins(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 18.0,
                                                     color: Theme.of(context)

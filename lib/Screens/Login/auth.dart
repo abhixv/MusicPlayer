@@ -23,6 +23,7 @@ import 'package:blackhole/Helpers/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:uuid/uuid.dart';
 
@@ -85,7 +86,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         },
                         child: Text(
                           AppLocalizations.of(context)!.restore,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             color: Colors.grey.withOpacity(0.7),
                           ),
                         ),
@@ -99,7 +100,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         },
                         child: Text(
                           AppLocalizations.of(context)!.skip,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             color: Colors.grey.withOpacity(0.7),
                           ),
                         ),
@@ -119,7 +120,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                 RichText(
                                   text: TextSpan(
                                     text: 'Black\nHole\n',
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       height: 0.97,
                                       fontSize: 80,
                                       fontWeight: FontWeight.bold,
@@ -128,9 +129,9 @@ class _AuthScreenState extends State<AuthScreen> {
                                           .secondary,
                                     ),
                                     children: <TextSpan>[
-                                      const TextSpan(
+                                      TextSpan(
                                         text: 'Music',
-                                        style: TextStyle(
+                                        style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 80,
                                           color: Colors.white,
@@ -138,7 +139,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                       ),
                                       TextSpan(
                                         text: '.',
-                                        style: TextStyle(
+                                        style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 80,
                                           color: Theme.of(context)
@@ -197,7 +198,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                       border: InputBorder.none,
                                       hintText: AppLocalizations.of(context)!
                                           .enterName,
-                                      hintStyle: const TextStyle(
+                                      hintStyle: GoogleFonts.poppins(
                                         color: Colors.white60,
                                       ),
                                     ),
@@ -249,7 +250,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                       child: Text(
                                         AppLocalizations.of(context)!
                                             .getStarted,
-                                        style: const TextStyle(
+                                        style: GoogleFonts.poppins(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20.0,
@@ -264,7 +265,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                   ),
                                   child: Text(
                                     '${AppLocalizations.of(context)!.disclaimer} ${AppLocalizations.of(context)!.disclaimerText}',
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       color: Colors.grey.withOpacity(0.7),
                                     ),
                                   ),

@@ -26,6 +26,7 @@ import 'package:blackhole/Helpers/playlist.dart';
 import 'package:blackhole/Services/youtube_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 import 'package:logging/logging.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
@@ -244,8 +245,8 @@ class SearchAddPlaylist {
                           Center(
                             child: Text(
                               AppLocalizations.of(context)!.convertingSongs,
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.w600),
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w600),
                             ),
                           ),
                           SizedBox(

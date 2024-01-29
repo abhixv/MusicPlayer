@@ -26,6 +26,7 @@ import 'package:blackhole/constants/countrycodes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:sizer/sizer.dart';
 
@@ -99,7 +100,7 @@ class _PrefScreenState extends State<PrefScreen> {
                         },
                         child: Text(
                           AppLocalizations.of(context)!.restore,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             color: Colors.grey.withOpacity(0.7),
                           ),
                         ),
@@ -110,7 +111,7 @@ class _PrefScreenState extends State<PrefScreen> {
                         },
                         child: Text(
                           AppLocalizations.of(context)!.skip,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             color: Colors.grey.withOpacity(0.7),
                           ),
                         ),
@@ -133,7 +134,7 @@ class _PrefScreenState extends State<PrefScreen> {
                                 text: TextSpan(
                                   text:
                                       '${AppLocalizations.of(context)!.welcome}\n',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 46.sp,
                                     height: 1.0,
                                     fontWeight: FontWeight.bold,
@@ -144,7 +145,7 @@ class _PrefScreenState extends State<PrefScreen> {
                                     TextSpan(
                                       text:
                                           AppLocalizations.of(context)!.aboard,
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 52.sp,
                                         color: Colors.white,
@@ -152,7 +153,7 @@ class _PrefScreenState extends State<PrefScreen> {
                                     ),
                                     TextSpan(
                                       text: '!\n',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 54.sp,
                                         color: Theme.of(context)
@@ -163,7 +164,7 @@ class _PrefScreenState extends State<PrefScreen> {
                                     TextSpan(
                                       text:
                                           AppLocalizations.of(context)!.prefReq,
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                         height: 1.5,
                                         fontWeight: FontWeight.w300,
                                         fontSize: 14.sp,
@@ -361,8 +362,8 @@ class _PrefScreenState extends State<PrefScreen> {
                                                               context,
                                                             )!
                                                                 .ok,
-                                                            style:
-                                                                const TextStyle(
+                                                            style: GoogleFonts
+                                                                .poppins(
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
@@ -578,7 +579,7 @@ class _PrefScreenState extends State<PrefScreen> {
                                       child: Center(
                                         child: Text(
                                           AppLocalizations.of(context)!.finish,
-                                          style: const TextStyle(
+                                          style: GoogleFonts.poppins(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20.0,

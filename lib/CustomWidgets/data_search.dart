@@ -25,6 +25,7 @@ import 'package:blackhole/Services/player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
 class DataSearch extends SearchDelegate {
@@ -182,8 +183,10 @@ class DataSearch extends SearchDelegate {
       hintColor: Colors.white70,
       primaryIconTheme: theme.primaryIconTheme.copyWith(color: Colors.white),
       textTheme: theme.textTheme.copyWith(
-        titleLarge:
-            const TextStyle(fontWeight: FontWeight.normal, color: Colors.white),
+        titleLarge: GoogleFonts.poppins(
+          fontWeight: FontWeight.normal,
+          color: Colors.white,
+        ),
       ),
       inputDecorationTheme:
           const InputDecorationTheme(focusedBorder: InputBorder.none),
@@ -363,8 +366,8 @@ class DownloadsSearch extends SearchDelegate {
       hintColor: Colors.white70,
       primaryIconTheme: theme.primaryIconTheme.copyWith(color: Colors.white),
       textTheme: theme.textTheme.copyWith(
-        titleLarge:
-            const TextStyle(fontWeight: FontWeight.normal, color: Colors.white),
+        titleLarge: GoogleFonts.poppins(
+            fontWeight: FontWeight.normal, color: Colors.white),
       ),
       inputDecorationTheme:
           const InputDecorationTheme(focusedBorder: InputBorder.none),

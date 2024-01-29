@@ -26,6 +26,7 @@ import 'package:blackhole/CustomWidgets/image_card.dart';
 import 'package:blackhole/Models/song_item.dart';
 import 'package:blackhole/Models/url_image_generator.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:logging/logging.dart';
 
 class SongsListViewPage extends StatefulWidget {
@@ -179,7 +180,7 @@ class _SongsListViewPageState extends State<SongsListViewPage> {
                         ),
                         child: Text(
                           widget.listItemsTitle!,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0,
                             color: Theme.of(context).colorScheme.secondary,
@@ -193,7 +194,7 @@ class _SongsListViewPageState extends State<SongsListViewPage> {
                         title: Text(
                           entry.title,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w500,
                           ),
                         ),

@@ -30,6 +30,7 @@ import 'package:blackhole/Screens/Search/search.dart';
 import 'package:blackhole/constants/countrycodes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -82,7 +83,7 @@ class _TopChartsState extends State<TopCharts>
               Tab(
                 child: Text(
                   AppLocalizations.of(context)!.local,
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     color: Theme.of(context).textTheme.bodyLarge!.color,
                   ),
                 ),
@@ -90,7 +91,7 @@ class _TopChartsState extends State<TopCharts>
               Tab(
                 child: Text(
                   AppLocalizations.of(context)!.global,
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     color: Theme.of(context).textTheme.bodyLarge!.color,
                   ),
                 ),
@@ -99,7 +100,7 @@ class _TopChartsState extends State<TopCharts>
           ),
           title: Text(
             AppLocalizations.of(context)!.spotifyCharts,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               fontSize: 18,
               color: Theme.of(context).textTheme.bodyLarge!.color,
             ),

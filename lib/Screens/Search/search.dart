@@ -41,6 +41,7 @@ import 'package:blackhole/Services/youtube_services.dart';
 import 'package:blackhole/Services/yt_music.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:logging/logging.dart';
 
@@ -267,7 +268,7 @@ class _SearchPageState extends State<SearchPage> {
                                       label: Text(
                                         searchHistory[index].toString(),
                                       ),
-                                      labelStyle: TextStyle(
+                                      labelStyle: GoogleFonts.poppins(
                                         color: Theme.of(context)
                                             .textTheme
                                             .bodyLarge!
@@ -332,7 +333,7 @@ class _SearchPageState extends State<SearchPage> {
                                       Text(
                                         AppLocalizations.of(context)!
                                             .trendingSearch,
-                                        style: TextStyle(
+                                        style: GoogleFonts.poppins(
                                           color: Theme.of(context)
                                               .colorScheme
                                               .secondary,
@@ -364,7 +365,7 @@ class _SearchPageState extends State<SearchPage> {
                                                 .colorScheme
                                                 .secondary
                                                 .withOpacity(0.2),
-                                            labelStyle: TextStyle(
+                                            labelStyle: GoogleFonts.poppins(
                                               color: Theme.of(context)
                                                   .textTheme
                                                   .bodyLarge!
@@ -462,7 +463,8 @@ class _SearchPageState extends State<SearchPage> {
                                                   children: [
                                                     Text(
                                                       title,
-                                                      style: TextStyle(
+                                                      style:
+                                                          GoogleFonts.poppins(
                                                         color: Theme.of(context)
                                                             .colorScheme
                                                             .secondary,
@@ -595,8 +597,8 @@ class _SearchPageState extends State<SearchPage> {
                                                                     context,
                                                                   )!
                                                                       .viewAll,
-                                                                  style:
-                                                                      TextStyle(
+                                                                  style: GoogleFonts
+                                                                      .poppins(
                                                                     color: Theme
                                                                             .of(
                                                                       context,
@@ -926,7 +928,7 @@ class _SearchPageState extends State<SearchPage> {
           label: Text(element['label']!),
           selectedColor:
               Theme.of(context).colorScheme.secondary.withOpacity(0.2),
-          labelStyle: TextStyle(
+          labelStyle: GoogleFonts.poppins(
             color: searchType == element['key']
                 ? Theme.of(context).colorScheme.secondary
                 : Theme.of(context).textTheme.bodyLarge!.color,

@@ -5,6 +5,7 @@ import 'package:blackhole/Screens/Settings/player_gradient.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 class AppUIPage extends StatefulWidget {
@@ -55,7 +56,7 @@ class _AppUIPageState extends State<AppUIPage> {
             )!
                 .ui,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Theme.of(context).iconTheme.color,
             ),
           ),

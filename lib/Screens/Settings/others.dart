@@ -10,6 +10,7 @@ import 'package:blackhole/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -48,7 +49,7 @@ class _OthersPageState extends State<OthersPage> {
             )!
                 .others,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Theme.of(context).iconTheme.color,
             ),
           ),
@@ -76,7 +77,7 @@ class _OthersPageState extends State<OthersPage> {
               onTap: () {},
               trailing: DropdownButton(
                 value: lang,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 12,
                   color: Theme.of(context).textTheme.bodyLarge!.color,
                 ),
@@ -171,7 +172,7 @@ class _OthersPageState extends State<OthersPage> {
                                               .colorScheme
                                               .secondary
                                               .withOpacity(0.2),
-                                          labelStyle: TextStyle(
+                                          labelStyle: GoogleFonts.poppins(
                                             color: !value
                                                 ? Theme.of(context)
                                                     .colorScheme
@@ -207,7 +208,7 @@ class _OthersPageState extends State<OthersPage> {
                                               .colorScheme
                                               .secondary
                                               .withOpacity(0.2),
-                                          labelStyle: TextStyle(
+                                          labelStyle: GoogleFonts.poppins(
                                             color: value
                                                 ? Theme.of(context)
                                                     .colorScheme
@@ -514,7 +515,7 @@ class _OthersPageState extends State<OthersPage> {
                 dense: true,
                 trailing: Text(
                   '${Hive.box('settings').get("proxyIp", defaultValue: "103.47.67.134")}:${Hive.box('settings').get("proxyPort", defaultValue: 8080)}',
-                  style: const TextStyle(fontSize: 12),
+                  style: GoogleFonts.poppins(fontSize: 12),
                 ),
                 onTap: () {
                   showDialog(
@@ -546,7 +547,7 @@ class _OthersPageState extends State<OthersPage> {
                                     context,
                                   )!
                                       .ipAdd,
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color:
                                         Theme.of(context).colorScheme.secondary,
                                   ),
@@ -567,7 +568,7 @@ class _OthersPageState extends State<OthersPage> {
                                     context,
                                   )!
                                       .port,
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color:
                                         Theme.of(context).colorScheme.secondary,
                                   ),

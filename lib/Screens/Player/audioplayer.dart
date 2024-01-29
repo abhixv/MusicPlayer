@@ -51,6 +51,7 @@ import 'package:flutter_lyric/lyrics_model_builder.dart';
 import 'package:flutter_lyric/lyrics_reader_model.dart';
 import 'package:flutter_lyric/lyrics_reader_widget.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:logging/logging.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -101,7 +102,7 @@ class _PlayScreenState extends State<PlayScreen> {
           title: Center(
             child: Text(
               AppLocalizations.of(context)!.selectDur,
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w600,
                 color: Theme.of(context).colorScheme.secondary,
               ),
@@ -116,7 +117,7 @@ class _PlayScreenState extends State<PlayScreen> {
                   data: CupertinoThemeData(
                     primaryColor: Theme.of(context).colorScheme.secondary,
                     textTheme: CupertinoTextThemeData(
-                      dateTimePickerTextStyle: TextStyle(
+                      dateTimePickerTextStyle: GoogleFonts.poppins(
                         fontSize: 16,
                         color: Theme.of(context).colorScheme.secondary,
                       ),
@@ -340,7 +341,7 @@ class _PlayScreenState extends State<PlayScreen> {
                                               text: format(
                                                 '$e\n',
                                               ),
-                                              style: TextStyle(
+                                              style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.normal,
                                                 fontSize: 12,
                                                 color: Theme.of(context)
@@ -351,7 +352,7 @@ class _PlayScreenState extends State<PlayScreen> {
                                             ),
                                             TextSpan(
                                               text: '${details[e]}',
-                                              style: const TextStyle(
+                                              style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.normal,
                                               ),
                                             ),
@@ -412,7 +413,7 @@ class _PlayScreenState extends State<PlayScreen> {
                                 ),
                                 title: Text(
                                   AppLocalizations.of(context)!.sleepTimer,
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color:
                                         Theme.of(context).colorScheme.secondary,
                                   ),
@@ -1133,7 +1134,7 @@ class NowPlayingStream extends StatelessWidget {
                                   child: Text(
                                     AppLocalizations.of(context)!.addedBy,
                                     textAlign: TextAlign.start,
-                                    style: const TextStyle(
+                                    style: GoogleFonts.poppins(
                                       fontSize: 5.0,
                                     ),
                                   ),
@@ -1143,7 +1144,7 @@ class NowPlayingStream extends StatelessWidget {
                                   child: Text(
                                     AppLocalizations.of(context)!.autoplay,
                                     textAlign: TextAlign.start,
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       fontSize: 8.0,
                                       color: Theme.of(context)
                                           .colorScheme
@@ -1215,7 +1216,7 @@ class NowPlayingStream extends StatelessWidget {
                   title: Text(
                     queue[index].title,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontWeight: index == queueState.queueIndex
                           ? FontWeight.w600
                           : FontWeight.normal,
@@ -1411,7 +1412,7 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                       ? SelectableText(
                                           lyrics['lyrics'].toString(),
                                           textAlign: TextAlign.center,
-                                          style: const TextStyle(
+                                          style: GoogleFonts.poppins(
                                             fontSize: 16.0,
                                           ),
                                         )
@@ -1433,8 +1434,7 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                               emptyBuilder: () => Center(
                                                 child: Text(
                                                   'Lyrics Not Found',
-                                                  style: lyricUI
-                                                      .getOtherMainTextStyle(),
+                                                  style: GoogleFonts.poppins(),
                                                 ),
                                               ),
                                             );
@@ -1868,7 +1868,8 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                                               '_',
                                                               ' ',
                                                             ),
-                                                            style: TextStyle(
+                                                            style: GoogleFonts
+                                                                .poppins(
                                                               fontWeight:
                                                                   FontWeight
                                                                       .normal,
@@ -1884,8 +1885,8 @@ class _ArtWorkWidgetState extends State<ArtWorkWidget> {
                                                           TextSpan(
                                                             text: details[e]
                                                                 .toString(),
-                                                            style:
-                                                                const TextStyle(
+                                                            style: GoogleFonts
+                                                                .poppins(
                                                               fontWeight:
                                                                   FontWeight
                                                                       .normal,
@@ -2117,7 +2118,7 @@ class NameNControls extends StatelessWidget {
                             fadingEdgeEndFraction: 0.05,
                             fadingEdgeStartFraction: 0.05,
                             startAfter: const Duration(seconds: 2),
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: titleBoxHeight / 2.75,
                               fontWeight: FontWeight.bold,
                               // color: Theme.of(context).accentColor,
@@ -2140,7 +2141,7 @@ class NameNControls extends StatelessWidget {
                             fadingEdgeEndFraction: 0.05,
                             fadingEdgeStartFraction: 0.05,
                             startAfter: const Duration(seconds: 2),
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: titleBoxHeight / 6.75,
                               fontWeight: FontWeight.w400,
                             ),
@@ -2419,7 +2420,7 @@ class NameNControls extends StatelessWidget {
                         child: Text(
                           AppLocalizations.of(context)!.upNext,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w600,
                             fontSize: 18,
                           ),

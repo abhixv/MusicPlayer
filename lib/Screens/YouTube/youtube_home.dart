@@ -26,6 +26,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 
 bool status = false;
@@ -195,7 +196,7 @@ class _YouTubeState extends State<YouTube>
                                     const EdgeInsets.fromLTRB(10, 10, 0, 5),
                                 child: Text(
                                   '${searchedList[index]["title"]}',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color:
                                         Theme.of(context).colorScheme.secondary,
                                     fontSize: 18,
@@ -342,8 +343,8 @@ class _YouTubeState extends State<YouTube>
                                                           Text(
                                                             item['count']
                                                                 .toString(),
-                                                            style:
-                                                                const TextStyle(
+                                                            style: GoogleFonts
+                                                                .poppins(
                                                               fontSize: 20,
                                                               fontWeight:
                                                                   FontWeight
@@ -387,7 +388,7 @@ class _YouTubeState extends State<YouTube>
                                                   softWrap: false,
                                                   overflow:
                                                       TextOverflow.ellipsis,
-                                                  style: TextStyle(
+                                                  style: GoogleFonts.poppins(
                                                     fontSize: 11,
                                                     color: Theme.of(context)
                                                         .textTheme
@@ -469,7 +470,7 @@ class _YouTubeState extends State<YouTube>
                       context,
                     )!
                         .searchYt,
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 16.0,
                       color: Theme.of(context).textTheme.bodySmall!.color,
                       fontWeight: FontWeight.normal,

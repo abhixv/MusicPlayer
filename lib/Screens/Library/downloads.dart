@@ -36,6 +36,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:logging/logging.dart';
 // import 'package:path_provider/path_provider.dart';
@@ -646,7 +647,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.title,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -664,7 +665,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.artist,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -682,7 +683,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.albumArtist,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -700,7 +701,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.album,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -718,7 +719,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.genre,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -736,7 +737,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.year,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -754,7 +755,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
                   children: [
                     Text(
                       AppLocalizations.of(context)!.songPath,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
@@ -832,7 +833,7 @@ Future<Map> editTags(Map song, BuildContext context) async {
             },
             child: Text(
               AppLocalizations.of(context)!.ok,
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 color: Theme.of(context).colorScheme.secondary == Colors.white
                     ? Colors.black
                     : null,

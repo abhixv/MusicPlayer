@@ -19,6 +19,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:logging/logging.dart';
 
 class ShowSnackBar {
@@ -41,7 +42,7 @@ class ShowSnackBar {
           behavior: SnackBarBehavior.floating,
           content: Text(
             title,
-            style: const TextStyle(color: Colors.white),
+            style: GoogleFonts.poppins(color: Colors.white),
           ),
           action: noAction
               ? null

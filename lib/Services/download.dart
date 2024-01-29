@@ -28,6 +28,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart';
 import 'package:logging/logging.dart';
@@ -177,8 +178,8 @@ class Download with ChangeNotifier {
               ),
               title: Text(
                 AppLocalizations.of(context)!.alreadyExists,
-                style:
-                    TextStyle(color: Theme.of(context).colorScheme.secondary),
+                style: GoogleFonts.poppins(
+                    color: Theme.of(context).colorScheme.secondary),
               ),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -241,7 +242,7 @@ class Download with ChangeNotifier {
                             },
                             child: Text(
                               AppLocalizations.of(context)!.no,
-                              style: const TextStyle(color: Colors.white),
+                              style: GoogleFonts.poppins(color: Colors.white),
                             ),
                           ),
                           TextButton(
@@ -278,7 +279,7 @@ class Download with ChangeNotifier {
                             },
                             child: Text(
                               AppLocalizations.of(context)!.yes,
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 color:
                                     Theme.of(context).colorScheme.secondary ==
                                             Colors.white

@@ -26,6 +26,7 @@ import 'package:blackhole/Screens/Library/import.dart';
 import 'package:blackhole/Screens/Library/liked.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:logging/logging.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -497,7 +498,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                                                 context,
                                               )!
                                                   .rename,
-                                              style: TextStyle(
+                                              style: GoogleFonts.poppins(
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .secondary,
@@ -577,7 +578,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                                             context,
                                           )!
                                               .ok,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                             color: Theme.of(context)
                                                         .colorScheme
                                                         .secondary ==

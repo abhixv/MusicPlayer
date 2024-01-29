@@ -20,6 +20,7 @@
 import 'package:blackhole/Services/player_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PlaylistHead extends StatelessWidget {
   final List songsList;
@@ -47,7 +48,7 @@ class PlaylistHead extends StatelessWidget {
             '${songsList.length} ${AppLocalizations.of(
               context,
             )!.songs}',
-            style: const TextStyle(fontWeight: FontWeight.w600),
+            style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
           ),
           const Spacer(),
           TextButton.icon(
@@ -64,7 +65,7 @@ class PlaylistHead extends StatelessWidget {
             icon: const Icon(Icons.shuffle_rounded),
             label: Text(
               AppLocalizations.of(context)!.shuffle,
-              style: const TextStyle(fontWeight: FontWeight.w600),
+              style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
             ),
           ),
           IconButton(

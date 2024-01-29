@@ -27,6 +27,7 @@ import 'package:blackhole/Models/image_quality.dart';
 import 'package:blackhole/Services/player_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HorizontalAlbumsList extends StatelessWidget {
   final List songsList;
@@ -288,7 +289,7 @@ class HorizontalAlbumsList extends StatelessWidget {
                                 textAlign: TextAlign.center,
                                 softWrap: false,
                                 overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
+                                style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -298,7 +299,7 @@ class HorizontalAlbumsList extends StatelessWidget {
                                   textAlign: TextAlign.center,
                                   softWrap: false,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontSize: 11,
                                     color: Theme.of(context)
                                         .textTheme

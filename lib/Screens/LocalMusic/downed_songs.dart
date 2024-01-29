@@ -563,7 +563,7 @@ class _DownloadedSongsState extends State<DownloadedSongs>
 //                                   children: [
 //                                     Text(
 //                                       'Name',
-//                                       style: TextStyle(
+//                                       style:  GoogleFonts.poppins(
 //                                           color: Theme.of(context).accentColor),
 //                                     ),
 //                                   ],
@@ -658,7 +658,7 @@ class _DownloadedSongsState extends State<DownloadedSongs>
 //                                 },
 //                                 child: const Text(
 //                                   'Ok',
-//                                   style: TextStyle(color: Colors.white),
+//                                   style:  GoogleFonts.poppins(color: Colors.white),
 //                                 ),
 //                               ),
 //                               const SizedBox(
@@ -855,7 +855,7 @@ class _SongsTabState extends State<SongsTab>
                             //                   children: [
                             //                     Text(
                             //                       'Name',
-                            //                       style: TextStyle(
+                            //                       style:  GoogleFonts.poppins(
                             //                           color: Theme.of(context).accentColor),
                             //                     ),
                             //                   ],
@@ -950,7 +950,7 @@ class _SongsTabState extends State<SongsTab>
                             //                 },
                             //                 child: const Text(
                             //                   'Ok',
-                            //                   style: TextStyle(color: Colors.white),
+                            //                   style:  GoogleFonts.poppins(color: Colors.white),
                             //                 ),
                             //               ),
                             //               const SizedBox(
@@ -1060,7 +1060,7 @@ class _SongsTabState extends State<SongsTab>
                             //                       children: [
                             //                         Text(
                             //                           'Title',
-                            //                           style: TextStyle(
+                            //                           style:  GoogleFonts.poppins(
                             //                               color: Theme.of(context)
                             //                                   .accentColor),
                             //                         ),
@@ -1077,7 +1077,7 @@ class _SongsTabState extends State<SongsTab>
                             //                       children: [
                             //                         Text(
                             //                           'Artist',
-                            //                           style: TextStyle(
+                            //                           style:  GoogleFonts.poppins(
                             //                               color: Theme.of(context)
                             //                                   .accentColor),
                             //                         ),
@@ -1094,7 +1094,7 @@ class _SongsTabState extends State<SongsTab>
                             //                       children: [
                             //                         Text(
                             //                           'Album Artist',
-                            //                           style: TextStyle(
+                            //                           style:  GoogleFonts.poppins(
                             //                               color: Theme.of(context)
                             //                                   .accentColor),
                             //                         ),
@@ -1111,7 +1111,7 @@ class _SongsTabState extends State<SongsTab>
                             //                       children: [
                             //                         Text(
                             //                           'Album',
-                            //                           style: TextStyle(
+                            //                           style:  GoogleFonts.poppins(
                             //                               color: Theme.of(context)
                             //                                   .accentColor),
                             //                         ),
@@ -1128,7 +1128,7 @@ class _SongsTabState extends State<SongsTab>
                             //                       children: [
                             //                         Text(
                             //                           'Genre',
-                            //                           style: TextStyle(
+                            //                           style:  GoogleFonts.poppins(
                             //                               color: Theme.of(context)
                             //                                   .accentColor),
                             //                         ),
@@ -1145,7 +1145,7 @@ class _SongsTabState extends State<SongsTab>
                             //                       children: [
                             //                         Text(
                             //                           'Year',
-                            //                           style: TextStyle(
+                            //                           style:  GoogleFonts.poppins(
                             //                               color: Theme.of(context)
                             //                                   .accentColor),
                             //                         ),
@@ -1230,7 +1230,7 @@ class _SongsTabState extends State<SongsTab>
                             //                 },
                             //                 child: const Text(
                             //                   'Ok',
-                            //                   style: TextStyle(color: Colors.white),
+                            //                   style:  GoogleFonts.poppins(color: Colors.white),
                             //                 ),
                             //               ),
                             //               const SizedBox(

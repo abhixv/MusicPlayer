@@ -27,6 +27,7 @@ import 'package:blackhole/Services/youtube_services.dart';
 import 'package:blackhole/Services/yt_music.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:logging/logging.dart';
 
 class YouTubeArtist extends StatefulWidget {
@@ -111,7 +112,7 @@ class _YouTubeArtistState extends State<YouTubeArtist> {
                           ),
                           child: Text(
                             AppLocalizations.of(context)!.songs,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontWeight: FontWeight.bold,
                               fontSize: 18.0,
                               color: Theme.of(context).colorScheme.secondary,
@@ -131,7 +132,7 @@ class _YouTubeArtistState extends State<YouTubeArtist> {
                               title: Text(
                                 entry['title'].toString(),
                                 overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
+                                style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),

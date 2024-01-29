@@ -35,6 +35,7 @@ import 'package:blackhole/Screens/Common/song_list.dart';
 import 'package:blackhole/Services/player_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
 
 class ArtistSearchPage extends StatefulWidget {
@@ -187,7 +188,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                                 context,
                                               )!
                                                   .play,
-                                              style: TextStyle(
+                                              style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18.0,
                                                 color: Theme.of(context)
@@ -281,7 +282,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                                 context,
                                               )!
                                                   .radio,
-                                              style: TextStyle(
+                                              style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18.0,
                                                 color: Theme.of(context)
@@ -354,7 +355,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                       children: [
                                         Text(
                                           entry.key,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                             color: Theme.of(context)
                                                 .colorScheme
                                                 .secondary,
@@ -382,7 +383,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                                     .colorScheme
                                                     .secondary
                                                     .withOpacity(0.2),
-                                                labelStyle: TextStyle(
+                                                labelStyle: GoogleFonts.poppins(
                                                   color: category == ''
                                                       ? Theme.of(context)
                                                           .colorScheme
@@ -419,7 +420,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                                     .colorScheme
                                                     .secondary
                                                     .withOpacity(0.2),
-                                                labelStyle: TextStyle(
+                                                labelStyle: GoogleFonts.poppins(
                                                   color: category == 'latest'
                                                       ? Theme.of(context)
                                                           .colorScheme
@@ -457,7 +458,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                                     .colorScheme
                                                     .secondary
                                                     .withOpacity(0.2),
-                                                labelStyle: TextStyle(
+                                                labelStyle: GoogleFonts.poppins(
                                                   color:
                                                       category == 'alphabetical'
                                                           ? Theme.of(context)
@@ -559,7 +560,7 @@ class _ArtistSearchPageState extends State<ArtistSearchPage> {
                                           title: Text(
                                             '${entry.value[index]["title"]}',
                                             overflow: TextOverflow.ellipsis,
-                                            style: const TextStyle(
+                                            style: GoogleFonts.poppins(
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
