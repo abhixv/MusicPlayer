@@ -188,27 +188,27 @@ class _MyAppState extends State<MyApp> {
 
     if (Platform.isAndroid || Platform.isIOS) {
       // For sharing or opening urls/text coming from outside the app while the app is in the memory
-      _intentTextStreamSubscription =
-          ReceiveSharingIntent.getTextStream().listen(
-        (String value) {
-          Logger.root.info('Received intent on stream: $value');
-          handleSharedText(value, navigatorKey);
-        },
-        onError: (err) {
-          Logger.root.severe('ERROR in getTextStream', err);
-        },
-      );
+      // _intentTextStreamSubscription =
+      //     ReceiveSharingIntent.getTextStream().listen(
+      //   (String value) {
+      //     Logger.root.info('Received intent on stream: $value');
+      //     handleSharedText(value, navigatorKey);
+      //   },
+      //   onError: (err) {
+      //     Logger.root.severe('ERROR in getTextStream', err);
+      //   },
+      // );
 
-      // For sharing or opening urls/text coming from outside the app while the app is closed
-      ReceiveSharingIntent.getInitialText().then(
-        (String? value) {
-          Logger.root.info('Received Intent initially: $value');
-          if (value != null) handleSharedText(value, navigatorKey);
-        },
-        onError: (err) {
-          Logger.root.severe('ERROR in getInitialTextStream', err);
-        },
-      );
+      // // For sharing or opening urls/text coming from outside the app while the app is closed
+      // ReceiveSharingIntent.getInitialText().then(
+      //   (String? value) {
+      //     Logger.root.info('Received Intent initially: $value');
+      //     if (value != null) handleSharedText(value, navigatorKey);
+      //   },
+      //   onError: (err) {
+      //     Logger.root.severe('ERROR in getInitialTextStream', err);
+      //   },
+      // );
 
       // For sharing files coming from outside the app while the app is in the memory
       _intentDataStreamSubscription =

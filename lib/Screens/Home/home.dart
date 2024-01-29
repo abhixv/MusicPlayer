@@ -530,7 +530,7 @@ class _HomePageState extends State<HomePage> {
                             );
                           case 'YouTube':
                             return NavigationRailDestination(
-                              icon: const Icon(MdiIcons.youtube),
+                              icon: Icon(MdiIcons.youtube),
                               label:
                                   Text(AppLocalizations.of(context)!.youTube),
                             );
@@ -648,7 +648,7 @@ class _HomePageState extends State<HomePage> {
           );
         case 'YouTube':
           return CustomBottomNavBarItem(
-            icon: const Icon(MdiIcons.youtube),
+            icon: Icon(MdiIcons.youtube),
             title: Text(AppLocalizations.of(context)!.youTube),
             selectedColor: Theme.of(context).colorScheme.secondary,
           );
